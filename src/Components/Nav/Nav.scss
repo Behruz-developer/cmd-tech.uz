@@ -1,0 +1,103 @@
+.nav {
+    padding: 24px 0;
+    width: 100%;
+    z-index: 99999;
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &_list {
+        display: flex;
+        gap: 60px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-left: 1px solid #16161819;
+        border-right: 1px solid #16161819;
+        z-index: 99999;
+
+        @include media (950px) {
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #f2f2f3;
+            width: 100%;
+            border: none;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            transition: .3s;
+            transform: translateY(-110%);
+
+            &.active {
+                transform: translateY(0);
+
+            }
+        }
+    }
+
+    &_link {
+        font-family: 'Inter', sans-serif;
+        font-size: 18.26px;
+        font-weight: 500;
+        line-height: 21.33px;
+        text-align: left;
+        text-decoration-skip-ink: none;
+        color: black;
+
+
+
+        &.link {
+            border-left: 1px solid #16161819;
+            padding-left: 25px;
+
+            @include media(950px) {
+                display: none;
+            }
+        }
+
+        &.link1 {
+            display: none;
+
+            @include media(950px) {
+                display: block;
+            }
+        }
+    }
+
+    &_menu {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+
+        @include media(950px) {
+            display: block;
+        }
+    }
+
+    &_close {
+        font-size: 30px;
+        position: absolute;
+        top: 30px;
+        right: 45px;
+        display: none;
+
+        @include media (950px) {
+            display: block;
+        }
+
+        @include media (550px) {
+            right: 25px;
+
+        }
+    }
+}

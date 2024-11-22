@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import './mixins.scss';
+
+@import '../../Components/Nav/Nav.scss',
+'../../Components/Upcoming/Upcoming.scss',
+'../../Components/Tags/Tags.scss',
+'../../Components/Card/Card.scss',
+'../../Components/Contact/Contact.scss',
+'../../Components/Footer/Footer.scss',
+'../../Components/Products/Products.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin-left: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

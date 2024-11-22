@@ -1,0 +1,98 @@
+.upcoming {
+
+    &_img {
+        width: 100%;
+
+        @include media (1100px) {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    &_box {
+        position: relative;
+    }
+
+    &_card {
+        position: absolute;
+        top: 0;
+        display: flex;
+        gap: 320px;
+        padding: 34px;
+
+        @include media (1500px) {
+            gap: 280px;
+        }
+
+        @include media (1350px) {
+            gap: 240px;
+            padding: 25px;
+        }
+
+        @include media (1200px) {
+            gap: 200px;
+        }
+
+        @include media (1000px) {
+            gap: 150px;
+        }
+
+        @include media (800px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &_title {
+        font-family: 'Inter', sans-serif;
+        font-size: 125.3px;
+        font-weight: 400;
+        line-height: 106.53px;
+        letter-spacing: -5.013000011444092px;
+        text-align: left;
+        color: white;
+
+        @include media (1500px) {
+            font-size: 100px;
+            line-height: 100px;
+        }
+
+        @include media (1500px) {
+            font-size: 80px;
+            line-height: 100%;
+        }
+
+        @include media (1100px) {
+            font-size: 60px;
+            letter-spacing: 0;
+
+        }
+
+        @include media (800px) {
+            font-size: 40px;
+        }
+    }
+
+    &_text {
+        font-family: 'Inter', sans-serif;
+        font-size: 21.13px;
+        font-weight: 500;
+        line-height: 26.4px;
+        letter-spacing: -0.21299999952316284px;
+        text-align: left;
+        color: white;
+        max-width: 813px;
+        width: 100%;
+
+        @include media (1500px) {
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        @include media (1100px) {
+            font-size: 14px;
+
+        }
+    }
+}

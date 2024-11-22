@@ -1,0 +1,52 @@
+.tags {
+    margin-top: 20px;
+
+    &_box {
+        width: 100%;
+        background: #F4F4F4;
+        border-radius: 25px;
+        padding: 35px;
+        display: flex;
+        column-gap: 7px;
+        row-gap: 25px;
+        flex-wrap: wrap;
+
+        @include media (750px) {
+            row-gap: 15px;
+            padding: 15px;
+
+        }
+    }
+
+    &_link {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: left;
+        background: white;
+        padding: 12px 33px;
+        color: black;
+        border-radius: 37px;
+        transition: .2s;
+
+        &:hover {
+            background: #d4d4d4;
+        }
+
+        @include media (750px) {
+            font-size: 14px;
+            padding: 10px 28px;
+        }
+
+        @include media (550px) {
+            padding: 8px 22px;
+
+        }
+
+        &.active {
+            background: black;
+            color: white;
+        }
+    }
+}

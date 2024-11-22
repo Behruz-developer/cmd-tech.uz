@@ -1,0 +1,180 @@
+.footer {
+    margin-top: 50px;
+    padding-bottom: 50px;
+
+    &_title {
+        font-family: 'Inter', sans-serif;
+        font-size: 18.55px;
+        font-weight: 500;
+        line-height: 21.33px;
+        color: #17171799;
+
+        @include media (450px) {
+            font-size: 15px;
+        }
+    }
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        @include media (1300px) {
+            flex-direction: column;
+            row-gap: 50px;
+        }
+
+        @include media (550px) {
+            margin-top: 30px;
+        }
+
+        @include media (450px) {
+            row-gap: 30px;
+
+        }
+    }
+
+    &_card_box {
+        display: flex;
+        column-gap: 100px;
+
+        @include media (1550px) {
+            column-gap: 40px;
+        }
+
+        @include media (1350px) {
+            column-gap: 30px;
+        }
+
+        @include media (450px) {
+            column-gap: 30px;
+        }
+    }
+
+    &_phone {
+        font-family: 'Inter', sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 37.33px;
+        color: black;
+
+        @include media (1450px) {
+            font-size: 25px;
+            line-height: 32px;
+        }
+    }
+
+    &_card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include media (600px) {
+            gap: 15px;
+        }
+    }
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include media (600px) {
+            gap: 10px;
+        }
+    }
+
+    &_subtitle {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.33px;
+
+        @include media (1350px) {
+            font-size: 15px;
+            line-height: 18px;
+
+        }
+    }
+
+    &_link {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.33px;
+        color: #16161899;
+
+        @include media (1350px) {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+
+    &_email {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &_input {
+        font-family: 'Inter', sans-serif;
+        font-size: 21.3px;
+        font-weight: 500;
+        line-height: 25.78px;
+        outline: none;
+        border: 1px solid gainsboro;
+        background: #FAFAFA;
+        padding: 24px 22px;
+        border-radius: 16px;
+
+        &::placeholder {
+            color: black;
+        }
+
+        @include media (1400px) {
+            padding: 20px 18px;
+        }
+
+        @include media (600px) {
+            padding: 15px 10px;
+            max-height: 200px;
+            width: 1000%;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+
+        @include media (500px) {
+            padding: 10px 10px;
+        }
+    }
+
+    &_btn {
+        padding: 23px 35px;
+        font-family: 'Inter', sans-serif;
+        font-size: 20.97px;
+        font-weight: 500;
+        line-height: 29.33px;
+        text-align: center;
+        border-radius: 16px;
+        outline: none;
+        border: none;
+        background: black;
+        color: white;
+        cursor: pointer;
+
+        @include media (1400px) {
+            padding: 20px 28px;
+            font-size: 18px;
+        }
+
+        @include media (600px) {
+            padding: 15px 20px;
+            font-size: 15px;
+            border-radius: 12px;
+
+        }
+
+        @include media (500px) {
+            padding: 10px 20px;
+        }
+    }
+}
