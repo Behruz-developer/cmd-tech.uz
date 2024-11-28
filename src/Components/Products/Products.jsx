@@ -25,17 +25,17 @@ const Products = () => {
     }, []);
 
     const products = [
-        { id: 1, tag: ['Корпоративный сайт'], subtitle: 'TADBIRKOR', term: '1 месяцев', image: product1 },
-        { id: 2, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'TOURFETTO', term: '1 месяцев', image: product2 },
-        { id: 10, tag: ['Landing Page'], subtitle: 'CRYSTAL AVENUE', term: '1 месяцев', image: product10 },
-        { id: 3, tag: ['Landing Page'], subtitle: 'BORN UZBEK', term: '1 месяцев', image: product3 },
-        { id: 4, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'WELLRICE', term: '1 месяцев', image: product4 },
-        { id: 5, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'EURO LIGHT', term: '1 месяцев', image: product5 },
-        { id: 6, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'DR CHIROPRACTOR', term: '1 месяцев', image: product6 },
-        { id: 7, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'AQUADOCTOR', term: '1 месяцев', image: product7 },
-        { id: 8, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'ELEKSAN', term: '1 месяцев', image: product8 },
-        { id: 9, tag: ['Landing Page'], subtitle: 'BRILLIANT CENTRE', term: '1 месяцев', image: product9 },
-        { id: 11, tag: ['Блог-сайт', 'SEO-оптимизация'], subtitle: 'THE REGISTAN', term: '1 месяцев', image: product11 }
+        { id: 1, tag: ['Корпоративный сайт'], subtitle: 'TADBIRKOR', term: '1 месяцев', image: product1, url: 'https://tadbirkor-uz.netlify.app' },
+        { id: 2, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'TOURFETTO', term: '1 месяцев', image: product2, url: 'https://tourfetto.uz/' },
+        { id: 3, tag: ['Landing Page'], subtitle: 'CRYSTAL AVENUE', term: '1 месяцев', image: product10, url: 'https://crystalavenue.txt.group/' },
+        { id: 4, tag: ['Landing Page'], subtitle: 'BORN UZBEK', term: '1 месяцев', image: product3, url: 'https://born-uzbek.netlify.app' },
+        { id: 5, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'WELLRICE', term: '1 месяцев', image: product4, url: 'https://wellrise.uz/' },
+        { id: 6, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'EURO LIGHT', term: '1 месяцев', image: product5, url: 'https://euro-light.uz/ru' },
+        { id: 7, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'DR CHIROPRACTOR', term: '1 месяцев', image: product6, url: 'https://drchiropractor.uz/' },
+        { id: 8, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'AQUADOCTOR', term: '1 месяцев', image: product7, url: 'https://www.aquadoctor.uz/ru' },
+        { id: 9, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'ELEKSAN', term: '1 месяцев', image: product8, url: 'https://eleksan.uz/ru' },
+        { id: 10, tag: ['Landing Page'], subtitle: 'BRILLIANT CENTRE', term: '1 месяцев', image: product9, url: 'https://brilliantcentre.txt.group/' },
+        { id: 11, tag: ['Блог-сайт', 'SEO-оптимизация'], subtitle: 'THE REGISTAN', term: '1 месяцев', image: product11, url: 'https://theregistan.uz/' }
     ];
 
     const filteredProducts = activeTag === 'Все проекты'
@@ -56,7 +56,7 @@ const Products = () => {
                 <div className="products_box">
                     {filteredProducts.slice(0, visibleCount).map((product, index) => (
                         <a
-                            href="#!"
+                            href={product.url}
                             key={product.id}
                             className="products_card"
                             data-aos="fade-up"
