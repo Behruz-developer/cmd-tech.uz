@@ -1,40 +1,46 @@
 import React, { useEffect, useState } from 'react';
-import product1 from '../../assets/images/product1.png';
-import product2 from '../../assets/images/product2.png';
-import product3 from '../../assets/images/product3.png';
-import question from '../../assets/images/question.svg';
-import arrow from '../../assets/images/arrow.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import useStore from '../../store/useStore';
+import product1 from '../../assets/images/product1.png';
+import product2 from '../../assets/images/product2.png';
+import product3 from '../../assets/images/product3.png';
+import product4 from '../../assets/images/product4.png';
+import product5 from '../../assets/images/product5.png';
+import product6 from '../../assets/images/product6.png';
+import product7 from '../../assets/images/product7.png';
+import product8 from '../../assets/images/product8.png';
+import product9 from '../../assets/images/product9.png';
+import product10 from '../../assets/images/product10.png';
+import product11 from '../../assets/images/product11.png';
+import question from '../../assets/images/question.svg';
+import arrow from '../../assets/images/arrow.png';
 
 const Products = () => {
-    const { activeTag } = useStore(); // Zustand orqali aktiv tagni olish
+    const { activeTag } = useStore();
     const [visibleCount, setVisibleCount] = useState(4);
 
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     const products = [
-        { id: 1, tag: 'Landing Page', subtitle: 'TADBIRKOR', term: '1 месяцев', image: product1 },
-        { id: 2, tag: 'Сайт-визитка', subtitle: 'TOURFETTO', term: '1 месяцев', image: product2 },
-        { id: 3, tag: 'Корпоративный сайт', subtitle: 'BORN UZBEK', term: '1 месяцев', image: product3 },
-        { id: 4, tag: 'Блог-сайт', subtitle: 'YAQINLAR', term: '1 месяцев', image: product3 },
-        { id: 5, tag: 'E-commerce', subtitle: 'WELLRISE', term: '1 месяцев', image: product1 },
-        { id: 6, tag: 'CRM-системы', subtitle: 'DRCHIROPRACTOR', term: '1 месяцев', image: product2 },
-        { id: 7, tag: 'SEO-оптимизация', subtitle: 'AQUADOCTOR', term: '1 месяцев', image: product3 },
-        { id: 8, tag: 'Landing Page', subtitle: 'DISCOVERYPLAST', term: '1 месяцев', image: product3 },
-        { id: 9, tag: 'Корпоративный сайт', subtitle: 'ELEKSAN', term: '1 месяцев', image: product1 }
+        { id: 1, tag: ['Корпоративный сайт'], subtitle: 'TADBIRKOR', term: '1 месяцев', image: product1 },
+        { id: 2, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'TOURFETTO', term: '1 месяцев', image: product2 },
+        { id: 10, tag: ['Landing Page'], subtitle: 'CRYSTAL AVENUE', term: '1 месяцев', image: product10 },
+        { id: 3, tag: ['Landing Page'], subtitle: 'BORN UZBEK', term: '1 месяцев', image: product3 },
+        { id: 4, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'WELLRICE', term: '1 месяцев', image: product4 },
+        { id: 5, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'EURO LIGHT', term: '1 месяцев', image: product5 },
+        { id: 6, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'DR CHIROPRACTOR', term: '1 месяцев', image: product6 },
+        { id: 7, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'AQUADOCTOR', term: '1 месяцев', image: product7 },
+        { id: 8, tag: ['Корпоративный сайт', 'SEO-оптимизация'], subtitle: 'ELEKSAN', term: '1 месяцев', image: product8 },
+        { id: 9, tag: ['Landing Page'], subtitle: 'BRILLIANT CENTRE', term: '1 месяцев', image: product9 },
+        { id: 11, tag: ['Блог-сайт', 'SEO-оптимизация'], subtitle: 'THE REGISTAN', term: '1 месяцев', image: product11 }
     ];
 
-    // Filtrlangan mahsulotlar
     const filteredProducts = activeTag === 'Все проекты'
-        ? products // Hammasini ko'rsatadi
-        : products.filter(product => product.tag === activeTag);
+        ? products
+        : products.filter(product => product.tag.includes(activeTag));
 
     const showMore = () => {
         setVisibleCount(filteredProducts.length);
@@ -58,7 +64,7 @@ const Products = () => {
                         >
                             <img src={product.image} alt={product.subtitle} />
                             <div className="products_card_text">
-                                <p className="products_tag">{product.tag}</p>
+                                <p className="products_tag">{product.tag.join(' • ')}</p>
                                 <p className="products_subtitle">{product.subtitle}</p>
                                 <p className="products_term">{product.term}</p>
                                 <a href="#!" className="products_link">подробно</a>
