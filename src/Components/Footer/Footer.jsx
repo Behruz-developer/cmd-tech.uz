@@ -7,13 +7,11 @@ const Footer = () => {
     const handleInputChange = (e) => {
         let inputValue = e.target.value;
 
-        // Prefiksni +998 qilib to'g'irlash
         if (!inputValue.startsWith("+998")) {
             inputValue = "+998 ";
         }
 
-        // Faqat raqamlarni +998 dan keyin boshqarish
-        const numericPart = inputValue.replace(/[^0-9]/g, "").slice(3); // +998 dan keyingi raqamlar
+        const numericPart = inputValue.replace(/[^0-9]/g, "").slice(3);
         let formattedValue = "+998";
 
         if (numericPart.length > 0) {
@@ -52,7 +50,7 @@ const Footer = () => {
 
             if (response.ok) {
                 alert("Номер успешно отправлен!");
-                setValue(""); // Inputni tozalash
+                setValue("");
             } else {
                 alert("Ошибка при отправке сообщения.");
             }
