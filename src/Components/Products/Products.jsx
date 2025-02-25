@@ -18,7 +18,7 @@ import arrow from '../../assets/images/arrow.png';
 
 const Products = () => {
     const { activeTag } = useStore();
-    const [visibleCount, setVisibleCount] = useState(4);
+    const [visibleCount, setVisibleCount] = useState(6);
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
